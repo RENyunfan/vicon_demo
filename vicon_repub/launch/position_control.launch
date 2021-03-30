@@ -1,0 +1,17 @@
+<launch>
+
+	<rosparam   command="load" file="$(find vicon_repub)/config/map.yaml"/>
+
+
+	<arg name="use_stamped" value="true"> </arg>
+    <node pkg="vicon_repub" name="vicon_repub" type="vicon_repub" output="screen" />
+	<node pkg="rviz" name="rviz" type="rviz" args="-d $(find vicon_repub)/config/default.rviz" />
+
+	<node pkg="polar_controller" name="controller" type="controller">
+	    <remap from="/cmd_vel" to="/smoother_cmd_vel" />
+	</node>
+
+    <include file="$(find joy2twist)/launch/xbox.launch"/>
+    <include file="$(find vicon_bridge)/launch/vicon.launch"/>
+ 	<include file="$(find dashgo_driver)/launch/driver.launch"/>
+</launch>

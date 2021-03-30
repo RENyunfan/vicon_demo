@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: vicon_repub
+Description: Description of vicon_repub
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

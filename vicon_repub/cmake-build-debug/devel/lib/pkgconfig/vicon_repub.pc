@@ -1,0 +1,8 @@
+prefix=/home/yunfan/workspace/vicon_ws/src/vicon_repub/cmake-build-debug/devel
+
+Name: vicon_repub
+Description: Description of vicon_repub
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/usr/local
+
+Name: polar_controller
+Description: Description of polar_controller
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

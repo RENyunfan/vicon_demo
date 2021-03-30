@@ -1,0 +1,15 @@
+<launch>
+
+	<rosparam   command="load" file="$(find vicon_repub)/config/map.yaml"/>
+	<rosparam   command="load" file="$(find polar_controller)/config/default.yaml"/>
+	<node pkg="polar_controler" type="controller" name="controller">
+		<remap from="/odom" to="/vicon_odom" />/vicon_output
+		<remap from="/goal" to="/move_base_simple/goal" />
+	</node>
+
+	<include file="$(find vicon_repub)/launch/vicon.launch"/>
+	<include file="$(find joy2twist)/launch/xbox.launch"/>
+	<include file="$(find vicon_bridge)/launch/vicon.launch"/>
+	<include file="$(find dashgo_driver)/launch/driver.launch"/>
+
+</launch>

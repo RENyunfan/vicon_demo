@@ -1,0 +1,12 @@
+<launch>
+
+
+
+    <node pkg="vicon_repub" name="vicon_repub" type="vicon_repub" output="screen" >
+        <remap from="/vicon_input" to="/vicon/vehicle/vehicle" />
+        <remap from="/vicon_output" to="/vicon_odom" />
+    </node>
+
+	<node pkg="rviz" name="rviz" type="rviz" args="-d $(find vicon_repub)/config/default.rviz" />
+
+</launch>

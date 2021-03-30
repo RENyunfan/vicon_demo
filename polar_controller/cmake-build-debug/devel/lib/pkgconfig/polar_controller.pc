@@ -1,0 +1,8 @@
+prefix=/home/yunfan/workspace/vicon_ws/src/polar_controller/cmake-build-debug/devel
+
+Name: polar_controller
+Description: Description of polar_controller
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

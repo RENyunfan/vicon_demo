@@ -1,0 +1,5 @@
+/controller/pid/alpha: 0.8
+/controller/pid/beta: 0.0
+/controller/pid/dist: 0.3
+/controller/limit/vel: 0.5
+/controller/limit/ang: 0.5
